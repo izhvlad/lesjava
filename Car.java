@@ -1,22 +1,22 @@
 public class Car{
 private int id;
-private String brand;
+private String brend;
 private String model;
 private int years_release;
 private String color;
 private Integer price;
 private String reg_number;
 
-public Car(int id, String brand, String model, int years_release, String color, Integer price, String reg_number){
+public Car(int id, String brend, String model, int years_release, String color, Integer price, String reg_number){
     if(id >= 0){
         this.id = id;
     }else{
         throw new IllegalArgumentException();}
-    if(brand != null && brand.isEmty() == false){
-        this.brand = brand;
+    if(brend != null && brend.isEmpty() == false){
+        this.brend = brend;
     }else{
         throw new IllegalArgumentException();}
-    if(model != null && model.isEmty() == false){
+    if(model != null && model.isEmpty() == false){
         this.model = model;
     }else{
         throw new IllegalArgumentException();}
@@ -24,20 +24,19 @@ public Car(int id, String brand, String model, int years_release, String color, 
         this.years_release = years_release;
     } else{
         throw new IllegalArgumentException();}
-     if(color != null && color.isEmty() == false){
+     if(color != null && color.isEmpty() == false){
         this.color = color;
     }else{
-throw new IllegalargumentException();}
-        throw new IllegalArgumentException();}
-    if(prise >= 0){
+    throw new IllegalArgumentException();}
+    if(price >= 0){
         this.price = price;
     }else{
-        throw new IllegalargumentException();}
-    if(reg_number != null && reg_number.isEmthy() == false){
+        throw new IllegalArgumentException();}
+    if(reg_number != null && reg_number.isEmpty() == false){
         this.reg_number = reg_number;
     }else{
-        throw new IllegalargumentException();}
-
+        throw new IllegalArgumentException();}
+}
 
 public int getId(){
 return id;
@@ -46,26 +45,11 @@ public void setId(int id){
 this.id = id;
 }
 
-public String getBrand(){
-    return brand;
+public String getBrend(){
+    return brend;
 }
-public void setBrand(string brand){
-    this.brand = brand;
-}
-public int getId() {
-    return id;
-}
-
-public void setId(int id) {
-    this.id = id;
-}
-
-public String getBrand() {
-    return brand;
-}
-
-public void setBrand(String brand) {
-    this.brand = brand;
+public void setBrend(String brend){
+    this.brend = brend;
 }
 
 public String getModel() {
@@ -90,7 +74,7 @@ public String getColor() {
 
 public void setColor(String color) {
     this.color = color;
-}Integer
+}
 
 public Integer getPrice() {
     return price;
@@ -109,8 +93,8 @@ public void setRegNumber(String reg_number) {
     this.reg_number = reg_number;
 }
 
-
 }
+
 
 
 
