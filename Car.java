@@ -60,11 +60,11 @@ public void setModel(String model) {
     this.model = model;
 }
 
-public int getYearsRelease() {
+public int getYears_release() {
     return years_release;
 }
 
-public void setYearsRelease(int years_release) {
+public void setYears_release(int years_release) {
     this.years_release = years_release;
 }
 

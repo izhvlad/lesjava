@@ -29,6 +29,37 @@ int flag = 0;
     return result;
 }
 
+public static Car[] getCarByBrendAndYearOperational(Car[] cars, String brend, int years_release) {
+    if (cars == null) {
+        return new Car[0];
+         }
+        if (brend == null || brend.isEmpty()) {
+            return new Car[0];
+        }
+
+     int year = 2025;
+    int temp_car = 0;
+
+        for (int i = 0; i < cars.length; i++) {
+            Car car = cars[i];
+            int age = year - car.getYears_release();
+            if (car.getBrend().equalsIgnoreCase(brend) && age > years_release) {
+                temp_car++;
+            }
+        }
+
+        Car[] result = new Car[temp_car];
+        int flag = 0;
+        for (int i = 0; i < cars.length; i++) {
+            Car car = cars[i];
+            int age = year - car.getYears_release();
+            if (car.getBrend().equalsIgnoreCase(brend) && age > years_release) {
+                result[flag++] = car;
+            }
+        }
+        return result;
+    }
+
 public static void main(String[] args) {
 Car[] cars = {
     new Car(1, "Toyota", "Camry", 2020, "Black", 3500000, "A123BC"),
@@ -47,7 +78,12 @@ System.out.println("Найдено машин Mazda: " + Mazda.length);
     for(int i = 0; i < Mazda.length; i++) {
         System.out.println("- " + Mazda[i].getModel());
     }
+Car[] oldMazda = getCarByBrendAndYearOperational(cars, "Mazda", 4);
+        System.out.println("\n Mazda более 4 лет): " + oldMazda.length);
+        for (int i = 0; i < oldMazda.length; i++) {
+            System.out.println("- " + oldMazda[i].getModel() + " (год: " + oldMazda[i].getYears_release() + ")");
+        }
+    }
 
     
-}
 }
