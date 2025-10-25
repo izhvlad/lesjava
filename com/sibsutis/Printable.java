@@ -1,0 +1,4 @@
+interface Printable {
+   String print()
+           
+}
