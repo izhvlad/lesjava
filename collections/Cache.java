@@ -34,7 +34,12 @@ public T getFirst(){
     }
     return cache.get(0);
 }
-
+public T getLast(){
+    if(cache.isEmpty() == true ){
+        return null;
+    }
+    return cache.get(cache.size() - 1);
+}
 
 }
  //public int getN(int n)
