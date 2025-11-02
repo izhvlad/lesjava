@@ -11,12 +11,16 @@ public class Cache<T>{
    }
   
    
-    public void addelement(T element){
+    private void addelement(T element){
         if (cache.size() >= n){
             cache.remove(0); 
         }
         cache.add(element);
     }
+public void add(T item){
+    addelement(item);
+}
+
 
 }
  //public int getN(int n)
