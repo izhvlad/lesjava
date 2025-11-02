@@ -1,13 +1,12 @@
 public class Cache<T>{
     public int n;
-    public ArrayList<T> cache;
     //public  int flug = 0;
    public Cache(int n){
     if(n >= 1){ 
         this.n = n;
     }else{ 
         throw new IllegalArgumentException("n <= 0");}
-          this.cache = new ArrayList <T> (n);
+        public ArrayList<T> cache = new ArrayList <T> (n);
    }
   
    
@@ -20,9 +19,19 @@ public class Cache<T>{
 public void add(T item){
     addelement(item);
 }
+
 public boolean remove(T item){
   boolean removeItem = cache.remove(item);
   return removeItem;
+}
+public boolean exists(T item){
+    return cache.contains(item);
+}
+public T getFirst(){
+    if(cache.isEmpty() == true ){
+        return null;
+    }
+    return cache.get(0);
 }
 
 
