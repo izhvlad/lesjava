@@ -1,12 +1,13 @@
 public class Cache<T>{
     public int n;
+    public ArrayList<T> cache;
     //public  int flug = 0;
    public Cache(int n){
     if(n >= 1){ 
         this.n = n;
     }else{ 
         throw new IllegalArgumentException("n <= 0");}
-        public ArrayList<T> cache = new ArrayList <T> (n);
+        this.cache = new ArrayList<> (n);
    }
   
    
@@ -39,6 +40,12 @@ public T getLast(){
         return null;
     }
     return cache.get(cache.size() - 1);
+}
+public T getItemByIndex(int i){
+    if (cache.contains(cache.get(i)) == true){
+        return cache.get(i);
+    }
+    return null;
 }
 
 }
