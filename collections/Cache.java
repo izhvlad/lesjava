@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class Cache<T>{
     public int n;
     public ArrayList<T> cache;
@@ -5,9 +6,10 @@ public class Cache<T>{
    public Cache(int n){
     if(n >= 1){ 
         this.n = n;
+        this.cache = new ArrayList<> (n);
     }else{ 
         throw new IllegalArgumentException("n <= 0");}
-        this.cache = new ArrayList<> (n);
+        
    }
   
    
@@ -49,6 +51,8 @@ public T getItemByIndex(int i){
 }
 
 }
+
+
  //public int getN(int n)
     //return n;
       /*  if(flug == getN - 1 ){
