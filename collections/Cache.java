@@ -20,6 +20,10 @@ public class Cache<T>{
 public void add(T item){
     addelement(item);
 }
+public boolean remove(T item){
+  boolean removeItem = cache.remove(item);
+  return removeItem;
+}
 
 
 }
