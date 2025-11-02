@@ -27,6 +27,7 @@ public boolean remove(T item){
 public boolean exists(T item){
     return cache.contains(item);
 }
+
 public T getFirst(){
     if(cache.isEmpty() == true ){
         return null;
